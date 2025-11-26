@@ -1,0 +1,16 @@
+{
+  "name": "vibe-kanban-task-manager",
+  "version": "1.0.0",
+  "description": "Interactive task manager based on Eisenhower Matrix",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -o -c-1"
+  },
+  "keywords": [
+    "task-manager",
+    "eisenhower-matrix",
+    "productivity"
+  ],
+  "author": "",
+  "license": "MIT"
+}

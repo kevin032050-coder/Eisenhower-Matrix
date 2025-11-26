@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Eisenhower Matrix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Task Manager</h1>
+            <p class="subtitle">Eisenhower Matrix - Organize by Urgency & Importance</p>
+        </header>
+
+        <div class="add-task-section">
+            <input type="text" id="taskInput" placeholder="Enter a new task...">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <div class="matrix">
+            <div class="quadrants-grid">
+                <div class="quadrant urgent-important" data-quadrant="urgent-important">
+                    <div class="quadrant-header">
+                        <h2>🔥 Do First</h2>
+                        <p>Urgent & Important</p>
+                    </div>
+                    <div class="tasks-container" id="urgent-important"></div>
+                </div>
+
+                <div class="quadrant not-urgent-important" data-quadrant="not-urgent-important">
+                    <div class="quadrant-header">
+                        <h2>📅 Schedule</h2>
+                        <p>Not Urgent & Important</p>
+                    </div>
+                    <div class="tasks-container" id="not-urgent-important"></div>
+                </div>
+
+                <div class="quadrant urgent-not-important" data-quadrant="urgent-not-important">
+                    <div class="quadrant-header">
+                        <h2>👥 Delegate</h2>
+                        <p>Urgent & Not Important</p>
+                    </div>
+                    <div class="tasks-container" id="urgent-not-important"></div>
+                </div>
+
+                <div class="quadrant not-urgent-not-important" data-quadrant="not-urgent-not-important">
+                    <div class="quadrant-header">
+                        <h2>🗑️ Eliminate</h2>
+                        <p>Not Urgent & Not Important</p>
+                    </div>
+                    <div class="tasks-container" id="not-urgent-not-important"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="quadrantModal">
+            <div class="modal-content">
+                <h3>Select Quadrant for Task</h3>
+                <div class="quadrant-buttons">
+                    <button class="quadrant-btn" data-target="urgent-important">
+                        🔥 Do First<br><small>Urgent & Important</small>
+                    </button>
+                    <button class="quadrant-btn" data-target="not-urgent-important">
+                        📅 Schedule<br><small>Not Urgent & Important</small>
+                    </button>
+                    <button class="quadrant-btn" data-target="urgent-not-important">
+                        👥 Delegate<br><small>Urgent & Not Important</small>
+                    </button>
+                    <button class="quadrant-btn" data-target="not-urgent-not-important">
+                        🗑️ Eliminate<br><small>Not Urgent & Not Important</small>
+                    </button>
+                </div>
+                <button class="cancel-btn" id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</body>
+</html>
